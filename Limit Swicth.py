@@ -1,27 +1,29 @@
 import time
-
 import board
 import digitalio
 
-button_a = digitalio.DigitalInOut(board.BUTTON_A)
-button_a.direction = digitalio.Direction.INPUT
-button_a.pull = digitalio.Pull.DOWN
+limitOne = digitalio.DigitalInOut(board.GP15)
+limitOne.direction = digitalio.Direction.INPUT
+limitOne.pull = digitalio.Pull.UP
 
-button_b = digitalio.DigitalInOut(board.BUTTON_B)
-button_b.direction = digitalio.Direction.INPUT
-button_b.pull = digitalio.Pull.DOWN
+limitTwo = digitalio.DigitalInOut(board.GP16)
+limitTwo.direction = digitalio.Direction.INPUT
+limitTwo.pull = digitalio.Pull.UP
 
-switch = digitalio.DigitalInOut(board.SLIDE_SWITCH)
-switch.direction = digitalio.Direction.INPUT
-switch.pull = digitalio.Pull.UP
+# switch = digitalio.DigitalInOut(board.SLIDE_SWITCH)
+# switch.direction = digitalio.Direction.INPUT
+# switch.pull = digitalio.Pull.UP
 
 while True:
-    if button_a.value:
-        print((1,))
-    elif button_b.value:
-        print((2,))
-    elif switch.value:
-        print((-1,))
-    else:
-        print((0,))
+    # print("GP15",limitOne.value)
+    # print("GP16",limitTwo.value)
+
+    if limitOne.value:
+        print("GP15")
+    if limitTwo.value:
+        print("GP16")
+    # elif switch.value:
+    #     print((-1,))
+    # else:
+    #     print((0,))
     time.sleep(0.1)
