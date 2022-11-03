@@ -22,13 +22,14 @@ while True:
     # print("GP15",limitOne.value)
     # print("GP16",limitTwo.value)
     if limitOne.value:
-        print("GP15")
         relay.value = True
+        print("GP15")
+
     else:
         relay.value = False
 
     if limitTwo.value:
-        print("GP16")
+        print("Yes")
         # relay.value = False
     else:
         print("No Tsebo")
