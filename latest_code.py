@@ -32,11 +32,12 @@ while True:
         # relay.value = False
     else:
         print("No Tsebo")
+    time.sleep(0.1)
     #     relay.value = False
 
     # elif switch.value:
     #     print((-1,))
     # else:
     #     print((0,))
-    time.sleep(0.1)
+    # time.sleep(0.1)
 
